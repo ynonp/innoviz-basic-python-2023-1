@@ -52,16 +52,7 @@ print(f"welcome, {name}")
 favorite_number = int(input("Pick a number... "))
 print(f"{favorite_number} + 1 = {favorite_number + 1}")
 
-########################################
-# Exercises - With break Until 11:30
-#
-# 1. Read someone's age in years, print out the age in months
-#    (user types: 2, you say back 24)
-#
-# 2. Read someone's age in months, print out the age in years
-#
-# 3. Read sum of money in NIS, print out the sum in USD
-#
+
 
 
 
