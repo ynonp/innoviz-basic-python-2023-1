@@ -1,0 +1,26 @@
+# Functions and Lists Exercises
+
+1. Euler ex 3
+https://projecteuler.net/problem=3
+
+2. Let's write a game of Tic Tac Toe. The program reads
+   a move from the first player for example 0, 0
+   and then print the board:
+
+x . .
+. . .
+. . .
+
+   then it takes input for the second player and again
+   prints the board. For example the input was 1, 1 we
+   print:
+
+x . .
+. o .
+. . .
+
+   continue the game until the board is completely full,
+   no need to check for winners in this exercise
+
+3. Euler ex 8
+https://projecteuler.net/problem=8
