@@ -2,6 +2,7 @@
 
 1. Euler ex 3
 https://projecteuler.net/problem=3
+Answer:  6857
 
 2. Let's write a game of Tic Tac Toe. The program reads
    a move from the first player for example 0, 0
@@ -24,3 +25,4 @@ x . .
 
 3. Euler ex 8
 https://projecteuler.net/problem=8
+Answer:  23514624000
