@@ -1,41 +1,50 @@
-def new_board():
-    return [
-        ['.', '.', '.'],
-        ['.', '.', '.'],
-        ['.', '.', '.'],
-    ]
+from collections import defaultdict
+class Game:
+    board: list[list[str]]
+    player: str
 
+    # new object is created
+    def __init__(self):
+        self.board = [
+            ['.', '.', '.'],
+            ['.', '.', '.'],
+            ['.', '.', '.'],
+        ]
+        self.player = 'x'
 
-def print_board(board: list[list[str]]):
-    for row in board:
-        for square in row:
-            print(square, end=" ")
-        print()
+    def print(self):
+        for row in self.board:
+            for square in row:
+                print(square, end=" ")
+            print()
+        print(f"Next player: {self.player}. Go!")
 
+    def play(self):
+        row, column = self.get_next_move()
+        self.board[row][column] = self.player
+        self.next_turn()
 
-def play(board: list[list[str]],
-         player: str,
-         row: int,
-         column: int):
-    board[row][column] = player
+    def next_turn(self):
+        if self.player == 'x':
+            self.player = 'o'
+        else:
+            self.player = 'x'
 
-
-def next_player(player: str) -> str:
-    if player == 'x':
-        return 'o'
-    else:
-        return 'x'
-
-
-game = new_board()
-player = 'x'
-while True:
-    try:
+    def get_next_move(self):
+        self.print()
         next_move = input("play: (row, column) ")
         row, column = [int(x) for x in next_move.split(",")]
-        play(game, player, row, column)
-        print_board(game)
-        player = next_player(player)
+        return row, column
+
+
+games = defaultdict(Game)
+current_game = games['default']
+while True:
+    try:
+        game_name = input("what game do you want to play? ")
+        if game_name != '':
+            current_game = games[game_name]
+        current_game.play()
     except ValueError:
         print("Invalid move, please use [row,column] format")
     except IndexError:
