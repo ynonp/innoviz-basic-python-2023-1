@@ -1,14 +1,20 @@
 ## Data Structure Exercises
 
-# 1. count how many times each word appears in the following text:
+1. count how many times each word appears in the following text:
 
-```
-In Africa, pythons are native to the tropics south of the Sahara, but not in the extreme south-western tip of southern Africa (Western Cape) or in Madagascar. In Asia, they occur from Bangladesh, Nepal, India, Pakistan, and Sri Lanka, including the Nicobar Islands, through Myanmar, east to Indochina, southern China, Hong Kong and Hainan, as well as in the Malayan region of Indonesia and the Philippines.[1]
-Invasive
-Some suggest that P. bivittatus and P. sebae have the potential to be problematic invasive species in South Florida.[26] In early 2016, after a culling operation yielded 106 pythons, Everglades National Park officials suggested that "thousands" may live within the park, and that the species has been breeding there for some years. More recent data suggest that these pythons would not withstand winter climates north of Florida, contradicting previous research suggesting a more significant geographic potential range.[27]
-Python skin is used to make clothing, such as vests, belts, boots and shoes, or fashion accessories such as handbags. It may also be stretched and formed as the sound board of some string musical instruments, such as the erhu spike-fiddle, sanxian and the sanshin lutes.[28][29] With a high demand of snake skin in the current fashion industry, countries in Africa and Southern Asia partake in the legal and illegal selling of python skin. Providing an extremely low pay for the hunters with an extremely high selling product for the consumers, there is an enormous gap between the beginning and end of the snake skin trade.[30]
-```
+    ```
+    In Africa, pythons are native to the tropics south of the Sahara, but not in the extreme south-western tip of southern Africa (Western Cape) or in Madagascar. In Asia, they occur from Bangladesh, Nepal, India, Pakistan, and Sri Lanka, including the Nicobar Islands, through Myanmar, east to Indochina, southern China, Hong Kong and Hainan, as well as in the Malayan region of Indonesia and the Philippines.[1]
+    Invasive
+    Some suggest that P. bivittatus and P. sebae have the potential to be problematic invasive species in South Florida.[26] In early 2016, after a culling operation yielded 106 pythons, Everglades National Park officials suggested that "thousands" may live within the park, and that the species has been breeding there for some years. More recent data suggest that these pythons would not withstand winter climates north of Florida, contradicting previous research suggesting a more significant geographic potential range.[27]
+    Python skin is used to make clothing, such as vests, belts, boots and shoes, or fashion accessories such as handbags. It may also be stretched and formed as the sound board of some string musical instruments, such as the erhu spike-fiddle, sanxian and the sanshin lutes.[28][29] With a high demand of snake skin in the current fashion industry, countries in Africa and Southern Asia partake in the legal and illegal selling of python skin. Providing an extremely low pay for the hunters with an extremely high selling product for the consumers, there is an enormous gap between the beginning and end of the snake skin trade.[30]
+    ```
 
-You can use string.split() to get a list of words
+   You can use string.split() to get a list of words
 
-# 2. Print the word that appeared most often in the text
+2. Print the word that appeared most often in the text in the
+   defaultdict solution and in the normal dictionary solution
+
+
+3. Remove punctuations so the words "clothing," and "clothing"
+   will be counted as the same word
+

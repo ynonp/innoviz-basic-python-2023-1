@@ -7,6 +7,31 @@ Some suggest that P. bivittatus and P. sebae have the potential to be problemati
 Python skin is used to make clothing, such as vests, belts, boots and shoes, or fashion accessories such as handbags. It may also be stretched and formed as the sound board of some string musical instruments, such as the erhu spike-fiddle, sanxian and the sanshin lutes.[28][29] With a high demand of snake skin in the current fashion industry, countries in Africa and Southern Asia partake in the legal and illegal selling of python skin. Providing an extremely low pay for the hunters with an extremely high selling product for the consumers, there is an enormous gap between the beginning and end of the snake skin trade.[30]
 """
 
+words = text.split()
+print(words)
+counter = {}
+
+for word in words:
+    counter[word] = counter.get(word, 0) + 1
+
+counter = {}
+for word in words:
+    if word in counter:
+        counter[word] += 1
+    else:
+        counter[word] = 1
+
+default_counter = collections.defaultdict(int)
+for word in words:
+    default_counter[word] += 1
+
+counter_counter = collections.Counter(words)
+print(counter_counter)
+
+
+print(counter)
+print(default_counter)
+
 d = {
     "some": 12,
     "that": 8
@@ -20,3 +45,11 @@ d["that"] = d.get("that", 0) + 1
 # or with default dict
 d = collections.defaultdict(int)
 d["that"] += 1
+
+
+print(counter_counter.most_common(3))
+
+
+
+
+
