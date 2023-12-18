@@ -23,6 +23,15 @@ x . .
    continue the game until the board is completely full,
    no need to check for winners in this exercise
 
+----
+
+You can always press 'switch 3' as input
+and then you'll change to game number 3
+
+
+
+
+
 3. Euler ex 8
 https://projecteuler.net/problem=8
 Answer:  23514624000

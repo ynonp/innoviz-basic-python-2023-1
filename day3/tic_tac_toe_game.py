@@ -16,9 +16,8 @@ def print_board(board: list[list[str]]):
 def play(board: list[list[str]],
          player: str,
          row: int,
-         column: int) -> list[list[str]]:
+         column: int):
     board[row][column] = player
-    return board
 
 
 def next_player(player: str) -> str:
