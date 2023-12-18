@@ -15,6 +15,11 @@ print(s.total)
 print(t.total)
 
 
+## Add AI Player to tic tac toe game
+if a game name ends with '_against_ai' then 'x' is a human player and 'o' is an automated ai player
+
+
+
 ## Recursive Topological Sorting
 
 The following code assumes a class named Widget which represent a thing that needs to be built.

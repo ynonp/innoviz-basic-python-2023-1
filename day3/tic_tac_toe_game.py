@@ -1,7 +1,24 @@
 from collections import defaultdict
+
+class Player:
+    sign: str
+
+    def __init__(self, sign: str):
+        self.sign = sign
+
+    def __str__(self):
+        return self.sign
+
+    def get_next_move(self):
+        next_move = input("play: (row, column) ")
+        row, column = [int(x) for x in next_move.split(",")]
+        return row, column
+
+
 class Game:
     board: list[list[str]]
-    player: str
+    player: Player
+    players: list[Player]
 
     # new object is created
     def __init__(self):
@@ -10,7 +27,8 @@ class Game:
             ['.', '.', '.'],
             ['.', '.', '.'],
         ]
-        self.player = 'x'
+        self.players = [Player('x'), Player('o')]
+        self.player = self.players[0]
 
     def print(self):
         for row in self.board:
@@ -20,21 +38,18 @@ class Game:
         print(f"Next player: {self.player}. Go!")
 
     def play(self):
-        row, column = self.get_next_move()
+        self.print()
+        row, column = self.player.get_next_move()
         self.board[row][column] = self.player
         self.next_turn()
 
     def next_turn(self):
-        if self.player == 'x':
-            self.player = 'o'
+        if self.player == self.players[0]:
+            self.player = self.players[1]
         else:
-            self.player = 'x'
+            self.player = self.players[0]
 
-    def get_next_move(self):
-        self.print()
-        next_move = input("play: (row, column) ")
-        row, column = [int(x) for x in next_move.split(",")]
-        return row, column
+
 
 
 games = defaultdict(Game)
