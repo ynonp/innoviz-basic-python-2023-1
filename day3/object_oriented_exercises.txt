@@ -4,7 +4,8 @@ The following code assumes a class named Summer exists. Create that class so the
 s = Summer()
 t = Summer()
 
-s.add(10, 20)
+s.add(10)
+s.add(20)
 t.add(50)
 s.add(30)
 
