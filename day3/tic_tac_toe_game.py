@@ -1,6 +1,25 @@
+from typing import Literal
 from collections import defaultdict
+import random
+PlayerSign = Literal['x', 'o']
+BoardSign = Literal['x', 'o', '.']
 
-class Player:
+class AIPlayer:
+    sign: PlayerSign
+
+    def __init__(self, sign: PlayerSign):
+        self.sign = sign
+
+    def __str__(self):
+        return self.sign
+
+    def get_next_move(self):
+        row = random.randint(0, 2)
+        column = random.randint(0, 2)
+        print(f"AI Playing at {row}, {column}")
+        return row, column
+
+class HumanPlayer:
     sign: str
 
     def __init__(self, sign: str):
@@ -16,18 +35,18 @@ class Player:
 
 
 class Game:
-    board: list[list[str]]
-    player: Player
-    players: list[Player]
+    board: list[list[BoardSign]]
+    player: HumanPlayer | AIPlayer
+    players: list[HumanPlayer | AIPlayer]
 
     # new object is created
-    def __init__(self):
+    def __init__(self, players):
         self.board = [
             ['.', '.', '.'],
             ['.', '.', '.'],
             ['.', '.', '.'],
         ]
-        self.players = [Player('x'), Player('o')]
+        self.players = players
         self.player = self.players[0]
 
     def print(self):
@@ -50,15 +69,19 @@ class Game:
             self.player = self.players[0]
 
 
+games = {'': Game([HumanPlayer('x'), HumanPlayer('o')])}
 
-
-games = defaultdict(Game)
-current_game = games['default']
+current_game = games['']
 while True:
     try:
         game_name = input("what game do you want to play? ")
-        if game_name != '':
-            current_game = games[game_name]
+        if game_name not in games:
+            if game_name.endswith('against_ai'):
+                games[game_name] = Game([HumanPlayer('x'), AIPlayer('o')])
+            else:
+                games[game_name] = Game([HumanPlayer('x'), HumanPlayer('o')])
+
+        current_game = games[game_name]
         current_game.play()
     except ValueError:
         print("Invalid move, please use [row,column] format")

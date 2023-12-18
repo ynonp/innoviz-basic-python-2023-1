@@ -19,6 +19,11 @@ print(t.total)
 ## Add AI Player to tic tac toe game
 if a game name ends with '_against_ai' then 'x' is a human player and 'o' is an automated ai player
 
+if game_name not in games:
+    exists
+ else:
+    create a new game
+    games[game_name] = Game(...)
 
 
 ## Recursive Topological Sorting
