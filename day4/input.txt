@@ -1,0 +1,8 @@
+total 0
+-rw-r--r--   1 ynonp  staff    0 Dec 25 09:38 a
+-rw-r--r--   1 ynonp  staff    0 Dec 25 09:38 b
+-rw-r--r--   1 admin  staff    0 Dec 25 09:38 c
+drwxr-xr-x   8 ynonp  staff  256 Dec  5 09:26 day1
+drwxr-xr-x  10 root   staff  320 Dec 19 09:35 day2
+drwxr-xr-x  19 ynonp  staff  608 Dec 19 13:27 day3
+drwxr-xr-x   6 jk     staff  192 Nov 28 10:21 venv
