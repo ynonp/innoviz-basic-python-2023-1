@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import *
 
 app = QApplication()
-l = QLabel("hello world")
-l.show()
+l1 = QLabel("window 1")
+l1.show()
 app.exec()
